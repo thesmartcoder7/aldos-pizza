@@ -7,19 +7,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* 
-main {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    padding: 10%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
+/* - - - global properties - - - */
+p {
+    font-size: 1vw;
+}
+
+/* - - - hero section - - - */
 #hero{
     width: 100%;
     height: 100vh;
@@ -67,8 +61,83 @@ main {
     outline: none;
     border: 0.2vw solid #ca0808;
     margin-top: 2%;
-    border-radius: 1vw;
+    border-radius: 0.7vw;
     cursor: pointer;
+    font-size: 0.9vw;
 }
 
+/* - - - about section - - - */
 
+#about{
+    width: 100%;
+    padding: 5% 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+#about h3 {
+    font-size: 2vw;
+}
+
+#about hr {
+    height: 0.2vw;
+    background-color: #ca0808;
+    outline: none;
+    border: none;
+    width: 5vw;
+    margin-top: 0.5%;
+}
+
+#about .information {
+    display: flex;
+    padding-top: 4%;
+    justify-content: space-between;
+}
+
+#about .information div {
+    display: flex;
+    justify-content: center;
+    width: 48%;
+}
+
+#about .information .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .information .info p {
+    padding-bottom: 3%;
+    text-align: justify;
+}
+
+#about .information .info button {
+    background-color: #ca0808;
+    color: #fff;
+    padding: 1.5% 3%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    font-size: 0.9vw;
+}
+
+#about .information .images {
+    justify-content: flex-end;
+}
+
+#about .information .images img {
+    width: 90%;
+    border-radius: 1vw;
+}
+
+#about .information .images img.active {
+    display: block;
+}
+
+/* - - - menu section - - - */
