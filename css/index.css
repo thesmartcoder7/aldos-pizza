@@ -96,7 +96,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: #f3f3f3;
 }
 
 #about .information {
@@ -157,7 +157,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#f3f3f3
+    background-color:#fff
 }
 
 #menu .cards {
@@ -172,14 +172,18 @@ hr {
 #menu .cards .card{
     width: 30%;
     margin: 4% 0;
+    border-radius: 3vw;
+    box-shadow: 0vw 0.5vw 1vw rgba(0,0,0,0.3);
+    padding: 5% 2%;
 }
 
 #menu .cards .card img{
-    width: 50%;
+    width: 65%;
 }
 
 #menu .cards p{
    padding: 0 5%;
+   font-size: 0.9vw;
    /* text-align: justify; */
 }
 
@@ -193,4 +197,67 @@ hr {
     border-radius: 0.7vw;
     cursor: pointer;
     font-size: 0.9vw;
+}
+
+
+/* - - - mobile app section - - - */
+#cta{
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ca0808;
+}
+
+#cta .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#cta .text .words {
+    width: 100%;
+}
+
+#cta .text .words h3 {
+    font-size: 3vw;
+    text-align: left;
+    padding-right: 20%;
+    margin-bottom: 5%;
+}
+
+#cta .text .download {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+#cta .text .download .android {
+    width: 10vw;
+    margin: 0 3% 0 0;
+}
+
+#cta .text div .apple {
+    width: 9vw;
+}
+
+#cta .images{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#cta .images img{
+    width: 15vw;
+    margin-right: 10%;
+    border-radius: 2.5vw;
+    box-shadow: -0.5vw 0.7vw 0.7vw rgba(0, 0, 0, 0.3);
 }
