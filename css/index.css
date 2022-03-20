@@ -223,10 +223,11 @@ main {
     border-radius: 1.5vw;
     box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
     animation: appear 0.5s;
+    transition: 0.5s ease-out;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    /* display: none; */
+   display: none;
 }
 
 #order-modal svg{
@@ -401,6 +402,10 @@ main {
     display: none;
 }
 
+#order-modal .order-summary label p {
+    cursor: pointer;
+}
+
 #order-modal .order-summary label input[type=checkbox]:checked ~ div {
     background-color: #ca0808;
 }
@@ -431,6 +436,11 @@ main {
     outline: none;
     border-radius: 0.5vw;
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    animation: appear 0.5s;
+}
+
+#order-modal .order-summary input.hide {
+    display: none;
 }
 
 #order-modal .order-summary input[type=submit]{
