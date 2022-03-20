@@ -34,6 +34,13 @@ hr {
     margin-top: 0.5%;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
 /* - - - hero section - - - */
 #hero{
     width: 100%;
@@ -149,7 +156,6 @@ hr {
 }
 
 /* - - - menu section - - - */
-
 #menu{
     width: 100%;
     padding: 5% 10%;
@@ -184,7 +190,6 @@ hr {
 #menu .cards p{
    padding: 0 5%;
    font-size: 0.9vw;
-   /* text-align: justify; */
 }
 
 #menu button {
@@ -199,6 +204,186 @@ hr {
     font-size: 0.9vw;
 }
 
+/* - - - order-modal section - - - */
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#order-modal {
+    width: 90%;
+    height: 80vh;
+    padding: 5%;
+    background-color: #ffff;
+    position: fixed;
+    margin-top: 5%;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    animation: appear 0.5s;
+}
+
+#order-modal svg{
+    position: absolute;
+    width: 2vw;
+    left: 96%;
+    top: 3%;
+    cursor: pointer;
+    color: #ca0808;
+}
+
+#order-modal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#order-modal h3 {
+    color: #ca0808;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+
+#order-modal .selection {
+    width: 50%;
+}
+
+#order-modal .selection form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#order-modal .selection form div {
+    display: flex;
+    margin: 3% 0;
+}
+
+#order-modal .selection form .name-email {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#order-modal .selection form .name-email input {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .size-type {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#order-modal .selection form .size-type select {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    background-color: #f3f3f3;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .crust-quantity {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#order-modal .selection form .crust-quantity select {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    background-color: #f3f3f3;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .crust-quantity input[type=number] {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    background-color: #f3f3f3;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .toppings {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#order-modal .selection form .toppings div {
+    margin-top: 0;
+}
+
+#order-modal .selection form .toppings div div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#order-modal .selection form .toppings div div label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+
+#order-modal .selection form .toppings div div label input[type=checkbox] {
+    display: none;
+}
+
+#order-modal .selection form .toppings div div label input[type=checkbox]:checked ~ div {
+    background-color: #ca0808;
+}
+
+#order-modal .selection form .toppings div div label .checkbox__marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* background-color: #ca0808; */
+    width: 1vw;
+    height: 1vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.25vw;
+    margin-right: 5%;
+}
+
+#order-modal .selection form .toppings div div label .checkbox__marker::after {
+    content: "\2714";
+    color: #fff;
+    font-size: 0.8vw;
+}
+
+#order-modal .selection form div input[type=submit]{
+    background-color: #ca0808;
+    color: #fff;
+    padding: 10% 20%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+
+#order-modal .order-summary {
+    width: 50%;
+}
 
 /* - - - mobile app section - - - */
 #cta{

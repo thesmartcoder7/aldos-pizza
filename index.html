@@ -95,15 +95,16 @@
         </section>
 
         <!-- order modal -->
-        <div class="order-modal">
+        <div id="order-modal">
+            <svg id="close-order-modal" aria-hidden="true" role="img" viewBox="0 0 24 24"><path fill="#ca0808" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293Z" clip-rule="evenodd"/></svg>
             <div class="selection">
                 <h3>Pizza Options</h3>
                 <form action="">
-                    <div>
+                    <div class="name-email">
                         <input type="text" name="name" id="name" placeholder="Name">
                         <input type="email" name="email" id="email" placeholder="Email">
                     </div>
-                    <div>
+                    <div class="size-type">
                         <select id="size" name="size">
                             <option value="size" selected>Size</option>
                             <option value="small">Small</option>
@@ -111,7 +112,7 @@
                             <option value="large">Large</option>
                         </select>
                         <select id="type" name="type">
-                            <option value="type" selected>Type</option>
+                            <option value="type" selected>Pizza Type</option>
                             <option value="hawaiian">Hawaiian</option>
                             <option value="newyorker">NewYorker</option>
                             <option value="carlifonia">Carlifonia</option>
@@ -120,43 +121,49 @@
                             <option value="vegetarian">Vegetarian</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="crust-quantity">
                         <select id="crust" name="crust">
-                            <option value="crust" selected>Crust</option>
+                            <option value="crust" selected>Crust Type</option>
                             <option value="crispy">Crispy</option>
                             <option value="stuffed">Stuffed</option>
                             <option value="glutten-free">Glutten-free</option>
                         </select>
-                        <input type="number" name="quantity" id="quantity">
+                        <input type="number" name="quantity" id="quantity" placeholder="Quantity">
                     </div>
-                    <div>
+                    <div class="toppings">
                         <h3>Select Toppings</h3>
                         <div>
                             <div>
                                 <label for="pepperoni">
                                     <input type="checkbox" name="toppings" id="pepperoni" value="pepperoni">
+                                    <div class="checkbox__marker"></div>
                                     <p>Pepperoni</p>
                                 </label>
                                 <label for="mushroom">
                                     <input type="checkbox" name="toppings" id="mushroom" value="mushroom">
+                                    <div class="checkbox__marker"></div>
                                     <p>Mushroom</p>
                                 </label>
                                 <label for="basil">
                                     <input type="checkbox" name="toppings" id="basil" value="basil">
+                                    <div class="checkbox__marker"></div>
                                     <p>Basil</p>
                                 </label>
                             </div>
                             <div>
                                 <label for="green-pepper">
                                     <input type="checkbox" name="toppings" id="green-pepper" value="green-pepper">
+                                    <div class="checkbox__marker"></div>
                                     <p>Green Pepper</p>
                                 </label>
                                 <label for="saugage">
                                     <input type="checkbox" name="toppings" id="saugage" value="saugage">
+                                    <div class="checkbox__marker"></div>
                                     <p>Sausage</p>
                                 </label>
                                 <label for="onion">
                                     <input type="checkbox" name="toppings" id="onion" value="onion">
+                                    <div class="checkbox__marker"></div>
                                     <p>Onion</p>
                                 </label>
                             </div>
@@ -168,6 +175,7 @@
                 </form>
             </div>
             <div class="order-summary">
+                <h3>Order Summary</h3>
                 <div class="new-order">
 
                 </div>
