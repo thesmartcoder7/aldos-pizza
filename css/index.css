@@ -383,3 +383,7 @@ footer .footer-text {
     align-items: center;
     padding-top: 2%;
 }
+
+footer .footer-text p {
+    font-size: 0.85vw;
+}
