@@ -338,6 +338,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+#order-modal .selection form .toppings div div label p {
+    cursor: pointer;
+}
+
+#order-modal .selection form .toppings div div label .checkbox__marker {
     cursor: pointer;
 }
 
@@ -355,7 +362,6 @@ main {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    /* background-color: #ca0808; */
     width: 1vw;
     height: 1vw;
     border: 0.1vw solid rgba(0, 0, 0, 0.3);
