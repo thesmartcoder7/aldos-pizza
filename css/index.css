@@ -311,7 +311,7 @@ hr {
     font-size: 0.65vw;
     margin: 3% 2%;
     border-radius: 0.5vw;
-    border: 0.1vw solid rgba(0, 0, 0, 0.815);
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
     outline: none;
     width: 100%;
     height: 7vw;

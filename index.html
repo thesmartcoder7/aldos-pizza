@@ -94,6 +94,92 @@
             <button id="order">Order Now!</button>
         </section>
 
+        <!-- order modal -->
+        <div class="order-modal">
+            <div class="selection">
+                <h3>Pizza Options</h3>
+                <form action="">
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <select id="size" name="size">
+                            <option value="size" selected>Size</option>
+                            <option value="small">Small</option>
+                            <option value="medium">medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                        <select id="type" name="type">
+                            <option value="type" selected>Type</option>
+                            <option value="hawaiian">Hawaiian</option>
+                            <option value="newyorker">NewYorker</option>
+                            <option value="carlifonia">Carlifonia</option>
+                            <option value="greek">Greek</option>
+                            <option value="st.louis">St.Louis</option>
+                            <option value="vegetarian">Vegetarian</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="crust" name="crust">
+                            <option value="crust" selected>Crust</option>
+                            <option value="crispy">Crispy</option>
+                            <option value="stuffed">Stuffed</option>
+                            <option value="glutten-free">Glutten-free</option>
+                        </select>
+                        <input type="number" name="quantity" id="quantity">
+                    </div>
+                    <div>
+                        <h3>Select Toppings</h3>
+                        <div>
+                            <div>
+                                <label for="pepperoni">
+                                    <input type="checkbox" name="toppings" id="pepperoni" value="pepperoni">
+                                    <p>Pepperoni</p>
+                                </label>
+                                <label for="mushroom">
+                                    <input type="checkbox" name="toppings" id="mushroom" value="mushroom">
+                                    <p>Mushroom</p>
+                                </label>
+                                <label for="basil">
+                                    <input type="checkbox" name="toppings" id="basil" value="basil">
+                                    <p>Basil</p>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="green-pepper">
+                                    <input type="checkbox" name="toppings" id="green-pepper" value="green-pepper">
+                                    <p>Green Pepper</p>
+                                </label>
+                                <label for="saugage">
+                                    <input type="checkbox" name="toppings" id="saugage" value="saugage">
+                                    <p>Sausage</p>
+                                </label>
+                                <label for="onion">
+                                    <input type="checkbox" name="toppings" id="onion" value="onion">
+                                    <p>Onion</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" value="Add To Order">
+                    </div>
+                </form>
+            </div>
+            <div class="order-summary">
+                <div class="new-order">
+
+                </div>
+                <label for="delivery-option">
+                    <input type="checkbox" name="delivery" id="delivery-option">
+                    <p>Click to have it delivered to your location</p>
+                </label>
+                 <input type="text" name="location" id="location" placeholder="Enter your location">
+                 <input type="submit" value="Place Order">
+            </div>
+        </div>
+
         <!-- call to action -->
         <section id="cta">
             <div class="text">
