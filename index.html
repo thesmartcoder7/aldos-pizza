@@ -185,10 +185,20 @@
                     <p>Click to have it delivered to your location</p>
                 </label>
                  <input type="text" name="location" id="location" placeholder="Enter your location" class="hide">
-                 <input type="submit" value="Place Order">
+                 <input type="submit" value="Place Order" id="place-order">
+                 <div id="total">
+                     <p>The total for your order is $45.99</p>
+                     <button id="confirm">Proceed</button>
+                 </div>
             </div>
         </div>
 
+        <!-- confirmation popup -->
+        <div id="confirmation">
+            <h3>Order Complete!</h3>
+            <p>Thank you --Name--.<br> Your Order is on the way.</p>
+            <button id="order-confirm">Ok</button>
+        </div>
         <!-- call to action -->
         <section id="cta">
             <div class="text">

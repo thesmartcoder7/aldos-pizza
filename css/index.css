@@ -460,6 +460,65 @@ main {
 }
 
 
+#order-modal .order-summary #total {
+    display: none;
+    margin-top: 5%;
+}
+
+#order-modal .order-summary #total button {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-top: 5%;
+    background-color: #ca0808;
+    color: #fff;
+    padding: 3% 20%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+
+#confirmation {
+    width: 50%;
+    height: auto;
+    padding: 5%;
+    background-color: #ffff;
+    position: fixed;
+    margin-top: 5%;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    animation: appear 0.5s;
+    transition: 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#confirmation p {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#confirmation button {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    background-color: #ca0808;
+    color: #fff;
+    padding: 1% 5%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+
 /* - - - mobile app section - - - */
 #cta{
     width: 100%;
