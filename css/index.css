@@ -223,6 +223,10 @@ main {
     border-radius: 1.5vw;
     box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
     animation: appear 0.5s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* display: none; */
 }
 
 #order-modal svg{
@@ -232,12 +236,6 @@ main {
     top: 3%;
     cursor: pointer;
     color: #ca0808;
-}
-
-#order-modal {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
 }
 
 #order-modal h3 {
@@ -344,11 +342,6 @@ main {
     cursor: pointer;
 }
 
-#order-modal .selection form .toppings div div label .checkbox__marker {
-    cursor: pointer;
-}
-
-
 #order-modal .selection form .toppings div div label input[type=checkbox] {
     display: none;
 }
@@ -367,6 +360,7 @@ main {
     border: 0.1vw solid rgba(0, 0, 0, 0.3);
     border-radius: 0.25vw;
     margin-right: 5%;
+    cursor: pointer;
 }
 
 #order-modal .selection form .toppings div div label .checkbox__marker::after {
@@ -382,14 +376,79 @@ main {
     outline: none;
     border: 0.2vw solid #ca0808;
     margin-top: 2%;
-    border-radius: 0.7vw;
+    border-radius: 0.5vw;
     cursor: pointer;
     font-size: 0.7vw;
 }
 
 #order-modal .order-summary {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+#order-modal .order-summary label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+}
+
+#order-modal .order-summary label input[type=checkbox] {
+    display: none;
+}
+
+#order-modal .order-summary label input[type=checkbox]:checked ~ div {
+    background-color: #ca0808;
+}
+
+#order-modal .order-summary label .checkbox__marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1vw;
+    height: 1vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.25vw;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+#order-modal .order-summary label .checkbox__marker::after {
+    content: "\2714";
+    color: #fff;
+    font-size: 0.8vw;
+}
+
+#order-modal .order-summary input {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .order-summary input[type=submit]{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-top: 5%;
+    background-color: #ca0808;
+    color: #fff;
+    padding: 1% 2%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+
 
 /* - - - mobile app section - - - */
 #cta{
