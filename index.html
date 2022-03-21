@@ -184,12 +184,12 @@
                 <label for="delivery-option">
                     <input type="checkbox" name="delivery" id="delivery-option">
                     <div class="checkbox__marker"></div>
-                    <p>Click to have it delivered to your location</p>
+                    <p>Click to have it delivered to your location for $5 extra</p>
                 </label>
                  <input type="text" name="location" id="location" placeholder="Enter your location" class="hide">
                  <input type="submit" value="Place Order" id="place-order">
                  <div id="total">
-                     <p>The total for your order is $45.99</p>
+                     <p>The total for your order is $<span id="grand-total">0</span></p>
                      <button id="confirm">Proceed</button>
                  </div>
             </div>

@@ -14,6 +14,7 @@ let orderTotalPrompt = document.querySelector("#total")
 let orderConfirmation = document.querySelector("#confirm")
 let orderCompletionModal = document.querySelector("#confirmation")
 let orderCompletion = document.querySelector("#order-confirm")
+let grandTotalDisplay = document.querySelector("#grand-total")
 
 /* - - - the pizza object constructor - - -  */
 function Pizza(type, size, crust, toppings, quantity) {
@@ -54,35 +55,6 @@ Pizza.prototype.getToppings = function(){
     }
 }
 
-/* - - - modal related DOM event listeners - - - */
-orderModalHide.addEventListener("click", ()=>{
-    orderModal.style.display = "none"
-})
-
-orderModalShow.addEventListener("click", ()=>{
-    orderModal.style.display = "flex"
-})
-
-deliveryChecked.addEventListener("click", ()=>{
-    locationInput.value = ''
-    locationInput.classList.toggle("hide")
-})
-
-orderPlacement.addEventListener("click", ()=>{
-    orderTotalPrompt.style.display = "block"
-    console.log(locationInput.value)
-})
-
-orderConfirmation.addEventListener("click", ()=>{
-    orderModal.style.display = "none"
-    orderCompletionModal.style.display = "flex"
-})
-
-orderCompletion.addEventListener("click", ()=>{
-    orderCompletionModal.style.display = "none"
-    window.location.reload()
-})
-
 /* - - - form variables - - -  */
 let form = document.querySelector("#order-form")
 let userToppings = document.getElementsByName("toppings")
@@ -99,6 +71,7 @@ let pizzaToppings = []
 let totalOrders = []
 let totalCharges = 0
 let deliveryCharges = 0
+let grandTotal = 0
 
 /* - - - add order to cart - - - */
 function addOrderToCart(newOrder){
@@ -145,6 +118,17 @@ function getUserToppings(userToppings){
     }
 }
 
+/* - - - get user location - - - */
+function getUserLocation(){
+    if(locationInput.value !== ""){
+        deliveryCharges += 5
+        return true
+    } else {
+        deliveryCharges = 0
+        return false
+    }
+}
+
 /* - - - form submission event - - - */
 form.addEventListener("submit", (e)=>{
     e.preventDefault()
@@ -165,7 +149,12 @@ form.addEventListener("submit", (e)=>{
     )
 
     let newItem = document.createElement("li")
-    newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust. This order includes ${newOrder.toppings.toString()}, which costs $${newOrder.getToppings()} extra.`
+    if(newOrder.toppings.length === 0){
+        newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust and no extra toppings.`
+    } else {
+        newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust. This order includes ${newOrder.toppings.toString()}, which costs $${newOrder.getToppings()} extra.`
+    }
+    
     summaryList.appendChild(newItem)
 
     addOrderToCart(newOrder)
@@ -175,10 +164,48 @@ form.addEventListener("submit", (e)=>{
 
     console.log(grandTotal)
 
-    /* - - - - makes sure that all orders are under one name - - - */
+    /* - - - makes sure that all orders are under one name - - - */
     userNameEmail.style.display = "none"
     totalCharges = 0
-    
+})
+
+
+/* - - - modal related DOM event listeners - - - */
+orderModalHide.addEventListener("click", ()=>{
+    orderModal.style.display = "none"
+})
+
+orderModalShow.addEventListener("click", ()=>{
+    orderModal.style.display = "flex"
+})
+
+deliveryChecked.addEventListener("click", ()=>{
+    locationInput.value = ''
+    locationInput.classList.toggle("hide")
+})
+
+orderPlacement.addEventListener("click", ()=>{
+    if(!validation(userName, userEmail, userSize, userType, userCrust)[0]){
+        alert(validation(userName, userEmail, userSize, userType, userCrust)[1])
+        return
+    } else {
+        if(getUserLocation()){
+            grandTotal += deliveryCharges
+        } 
+        console.log(grandTotal)
+        orderTotalPrompt.style.display = "block"
+        grandTotalDisplay.textContent = grandTotal
+    }
+})
+
+orderConfirmation.addEventListener("click", ()=>{
+    orderModal.style.display = "none"
+    orderCompletionModal.style.display = "flex"
+})
+
+orderCompletion.addEventListener("click", ()=>{
+    orderCompletionModal.style.display = "none"
+    window.location.reload()
 })
 
 
