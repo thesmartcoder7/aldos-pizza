@@ -93,6 +93,8 @@ let userType = document.querySelector("#type")
 let userCrust = document.querySelector("#crust")
 let userQuantity = document.querySelector("#quantity")
 let userNameEmail = document.querySelector(".name-email")
+let cartSummary = document.querySelector(".new-order")
+let summaryList = document.querySelector("#summary-list")
 let pizzaToppings = []
 let totalOrders = []
 
@@ -149,12 +151,18 @@ form.addEventListener("submit", (e)=>{
         userSize.value, 
         userCrust.value, 
         pizzaToppings,
-        userQuantity
+        userQuantity.value
     )
+
+    let newItem = document.createElement("li")
+    newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust. This order includes ${newOrder.toppings.toString()}, which costs $${newOrder.getToppings()} extra.`
+    summaryList.appendChild(newItem)
     
     addOrderToCart(newOrder)
     
-    console.log(totalOrders)
+    cartSummary.style.display = "flex"
+    
+    // console.log(totalOrders)
 
     /* - - - - makes sure that all orders are under one name - - - */
     userNameEmail.style.display = "none"

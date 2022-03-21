@@ -10,7 +10,7 @@
 }
 
 /* - - - global properties - - - */
-p {
+p, li {
     font-size: 1vw;
     line-height: 1.7vw;
 }
@@ -389,6 +389,26 @@ main {
     align-items: flex-start;
     justify-content: flex-start;
 }
+
+#order-modal .order-summary .new-order {
+    width: 100%;
+    height: 20vw;
+    overflow: hidden;
+    display: none;
+    animation: appear 0.5s;
+}
+
+#order-modal .order-summary .new-order ul {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#order-modal .order-summary .new-order ul li {
+    width: 100%;
+    padding: 1% 0;
+    margin-left: 3%;
+}
+
 
 #order-modal .order-summary label {
     width: 100%;
