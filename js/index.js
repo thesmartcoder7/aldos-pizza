@@ -1,5 +1,9 @@
+/* - - - getting current year on the footer - - - */
 let footerYear = document.querySelector(".current-year")
 let currentYear = new Date
+footerYear.innerHTML = currentYear.getFullYear()
+
+/* - - - modal related variables - - - */
 let orderModal = document.querySelector("#order-modal")
 let orderModalHide = document.querySelector("#close-order-modal")
 let orderModalShow = document.querySelector("#order")
@@ -10,7 +14,6 @@ let orderTotalPrompt = document.querySelector("#total")
 let orderConfirmation = document.querySelector("#confirm")
 let orderCompletionModal = document.querySelector("#confirmation")
 let orderCompletion = document.querySelector("#order-confirm")
-
 
 /* - - - the pizza object constructor - - -  */
 function Pizza(size, crust, toppings) {
@@ -49,8 +52,7 @@ Pizza.prototype.getToppings = function(){
     }
 }
 
-
-/* - - - DOM event listeners - - - */
+/* - - - modal related DOM event listeners - - - */
 orderModalHide.addEventListener("click", ()=>{
     orderModal.style.display = "none"
 })
@@ -79,4 +81,37 @@ orderCompletion.addEventListener("click", ()=>{
     window.location.reload()
 })
 
-footerYear.innerHTML = currentYear.getFullYear()
+/* - - - form variables - - -  */
+let form = document.querySelector("#order-form")
+let userToppings = document.getElementsByName("toppings")
+let userName = document.querySelector("#name")
+let userEmail = document.querySelector("#email")
+let userSize = document.querySelector("#size")
+let userType = document.querySelector("#type")
+let userCrust = document.querySelector("#crust")
+let userQuantity = document.querySelector("#quantity")
+let pizzaToppings = []
+
+form.addEventListener("submit", (e)=>{
+    e.preventDefault()
+    for(i=0; i<userToppings.length; i++){
+        if(userToppings[i].checked === true){
+            if(!pizzaToppings.includes(userToppings[i].value)){
+                pizzaToppings.push(userToppings[i].value)
+            }
+        }
+    }
+
+    console.log(
+        userName.value,
+        userEmail.value,
+        userSize.value,
+        userType.value,
+        userCrust.value,
+        userQuantity.value,
+        pizzaToppings 
+        )
+    
+})
+
+
