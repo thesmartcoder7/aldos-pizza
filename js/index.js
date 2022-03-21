@@ -16,7 +16,8 @@ let orderCompletionModal = document.querySelector("#confirmation")
 let orderCompletion = document.querySelector("#order-confirm")
 
 /* - - - the pizza object constructor - - -  */
-function Pizza(size, crust, toppings) {
+function Pizza(type, size, crust, toppings) {
+    this.type = type
     this.size = size
     this.crust = crust
     this.toppings = toppings
