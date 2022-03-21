@@ -1010,6 +1010,17 @@ main {
     justify-content: space-between;
     background-color: #ca0808;
 }
+@media screen and (max-width: 500px) {
+    #cta {
+        width: 100%;
+        padding: 15% 5%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ca0808;
+    }
+}
 
 #cta .text {
     width: 50%;
@@ -1017,6 +1028,16 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+@media screen and (max-width: 500px) {
+    #cta .text {
+        width: 100%;
+        padding: 0 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 
 #cta .text .words {
@@ -1030,23 +1051,51 @@ main {
     margin-bottom: 5%;
     color: #fff;
 }
+@media screen and (max-width: 500px) {
+    #cta .text .words h3 {
+        font-size: 7vw;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 5%;
+        color: #fff;
+    }
+}
 
 #cta .text .download {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+}
+@media screen and (max-width: 500px) {
+    #cta .text .download {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 #cta .text .download .android {
     width: 10vw;
     margin: 0 3% 0 0;
 }
+@media screen and (max-width: 500px) {
+    #cta .text .download .android {
+        width: 25vw;
+        margin: 0 3% 0 0;
+    }
+}
 
 #cta .text div .apple {
     width: 9vw;
 }
+@media screen and (max-width: 500px) {
+    #cta .text div .apple {
+        width: 24vw;
+    }
+}
+
 
 #cta .images{
     width: 50%;
@@ -1054,12 +1103,29 @@ main {
     align-items: center;
     justify-content: flex-end;
 }
+@media screen and (max-width: 500px) {
+    #cta .images{
+        width: 100%;
+        margin-top: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 #cta .images img{
     width: 15vw;
     margin-left: 10%;
     border-radius: 2.5vw;
     box-shadow: -0.5vw 0.7vw 0.7vw rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 500px) {
+    #cta .images img{
+        width: 30vw;
+        margin: 0 5%;
+        border-radius: 2.5vw;
+        box-shadow: -0.5vw 0.7vw 0.7vw rgba(0, 0, 0, 0.3);
+    }
 }
 
 
