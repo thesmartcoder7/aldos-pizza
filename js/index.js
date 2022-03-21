@@ -15,6 +15,7 @@ let orderConfirmation = document.querySelector("#confirm")
 let orderCompletionModal = document.querySelector("#confirmation")
 let orderCompletion = document.querySelector("#order-confirm")
 let grandTotalDisplay = document.querySelector("#grand-total")
+let confirmationText = document.querySelector(".confirmation-text")
 
 /* - - - the pizza object constructor - - -  */
 function Pizza(type, size, crust, toppings, quantity) {
@@ -72,6 +73,7 @@ let totalOrders = []
 let totalCharges = 0
 let deliveryCharges = 0
 let grandTotal = 0
+let deliveryName = "user"
 
 /* - - - add order to cart - - - */
 function addOrderToCart(newOrder){
@@ -122,10 +124,10 @@ function getUserToppings(userToppings){
 function getUserLocation(){
     if(locationInput.value !== ""){
         deliveryCharges += 5
-        return true
+        return [true, locationInput.value]
     } else {
         deliveryCharges = 0
-        return false
+        return [false]
     }
 }
 
@@ -134,7 +136,7 @@ form.addEventListener("submit", (e)=>{
     e.preventDefault()
     if(!validation(userName, userEmail, userSize, userType, userCrust)[0]){
         alert(validation(userName, userEmail, userSize, userType, userCrust)[1])
-        console.log()
+        deliveryName = userName.value
         return
     }
 
@@ -166,6 +168,7 @@ form.addEventListener("submit", (e)=>{
 
     /* - - - makes sure that all orders are under one name - - - */
     userNameEmail.style.display = "none"
+    deliveryName = userName.value
     totalCharges = 0
 })
 
@@ -189,10 +192,9 @@ orderPlacement.addEventListener("click", ()=>{
         alert(validation(userName, userEmail, userSize, userType, userCrust)[1])
         return
     } else {
-        if(getUserLocation()){
+        if(getUserLocation()[0]){
             grandTotal += deliveryCharges
         } 
-        console.log(grandTotal)
         orderTotalPrompt.style.display = "block"
         grandTotalDisplay.textContent = grandTotal
     }
@@ -200,6 +202,11 @@ orderPlacement.addEventListener("click", ()=>{
 
 orderConfirmation.addEventListener("click", ()=>{
     orderModal.style.display = "none"
+    if(getUserLocation()[0]){
+        confirmationText.textContent = `Thank you ${deliveryName}. Your order will be ready in 30mins and will be deliverd to ${getUserLocation()[1]}`
+    } else {
+        confirmationText.textContent =  `Thank you ${deliveryName}. Your order will be ready in 30mins. Feel free to pick it up at your earliest convenience`
+    }
     orderCompletionModal.style.display = "flex"
 })
 
