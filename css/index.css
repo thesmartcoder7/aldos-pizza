@@ -1139,6 +1139,17 @@ main {
     align-items: flex-start;
     justify-content: space-between;
 }
+@media screen and (max-width: 500px) {
+    #contact{
+        width: 100%;
+        padding: 15% 10%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+    }
+}
 
 #contact .form {
     width: 50%;
@@ -1147,12 +1158,29 @@ main {
     align-items: flex-start;
     justify-content: flex-start;
 }
+@media screen and (max-width: 500px) {
+    #contact .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
 
 #contact .form form {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media screen and (max-width: 500px) {
+    #contact .form form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 #contact .form form div {
@@ -1161,14 +1189,35 @@ main {
     justify-content: space-between;
     width: 100%;
 }
+@media screen and (max-width: 500px) {
+    #contact .form form div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
 
 #contact .form form input {
+    width: 49%;
     padding: 3% 4%;
     font-size: 0.65vw;
     margin: 3% 0;
     border-radius: 0.5vw;
     outline: none;
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 500px) {
+    #contact .form form input {
+        width: 100%;
+        padding: 6% 5%;
+        font-size: 3.5vw;
+        margin: 3% 0;
+        border-radius: 2vw;
+        outline: none;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
 }
 
 #contact .form form textarea {
@@ -1181,6 +1230,18 @@ main {
     width: 100%;
     height: 7vw;
 }
+@media screen and (max-width: 500px) {
+    #contact .form form textarea {
+        padding: 6%;
+        font-size: 3.5vw;
+        margin: 3% 2%;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+        outline: none;
+        width: 100%;
+        height: 30vw;
+    }
+}
 
 #contact .form form input[type=submit]{
     background-color: #ca0808;
@@ -1192,11 +1253,34 @@ main {
     border: none;
     cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+    #contact .form form input[type=submit]{
+        display: flex;
+        justify-content: center;
+        background-color: #ca0808;
+        color: #fff;
+        padding: 5% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 5%;
+        border-radius: 2vw;
+        cursor: pointer;
+        font-size: 3.5vw;
+    }
+}
 
 #contact .form h3, #contact .contact-info h3 {
     color: #ca0808;
     margin-bottom: 5%;
     font-size: 1.5vw;
+}
+@media screen and (max-width: 500px) {
+    #contact .form h3, #contact .contact-info h3 {
+        color: #ca0808;
+        margin-bottom: 5%;
+        font-size: 6vw;
+        text-align: center;
+    }
 }
 
 #contact .contact-info {
@@ -1206,12 +1290,28 @@ main {
     align-items: flex-start;
     justify-content: flex-start;
 }
+@media screen and (max-width: 500px) {
+    #contact .contact-info {
+        width: 100%;
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
 
 #contact .contact-info div {
     display: flex;
     width: 100%;
     padding: 3% 0;
-
+}
+@media screen and (max-width: 500px) {
+    #contact .contact-info div {
+        display: flex;
+        width: 100%;
+        padding: 4% 0;
+    }
 }
 
 #contact .contact-info div svg {
@@ -1219,6 +1319,14 @@ main {
     color: #ca0808;
     margin-right: 3%;
 }
+@media screen and (max-width: 500px) {
+    #contact .contact-info div svg {
+        width: 6vw;
+        color: #ca0808;
+        margin-right: 6%;
+    }
+}
+
 
 /* - - - footer section - - - */
 footer{
