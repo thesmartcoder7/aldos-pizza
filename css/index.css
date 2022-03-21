@@ -16,7 +16,7 @@ p, li {
 }
 @media screen and (max-width: 500px) {
     p, li {
-        font-size: 4vw;
+        font-size: 3.5vw;
         line-height: 6vw;
     }
 }
@@ -394,6 +394,26 @@ main {
     justify-content: space-between;
    display: none;
 }
+@media screen and (max-width: 500px) {
+    #order-modal {
+        width: 90%;
+        height: 95vh;
+        padding: 10%;
+        background-color: #ffff;
+        position: fixed;
+        margin-top: 5%;
+        border-radius: 3vw;
+        box-shadow: 0 0 3vw rgba(0, 0, 0, 0.3);
+        animation: appear 0.5s;
+        transition: 0.5s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        display: none;
+    }
+}
+
 
 #order-modal svg{
     position: absolute;
@@ -403,15 +423,37 @@ main {
     cursor: pointer;
     color: #ca0808;
 }
+@media screen and (max-width: 500px) {
+    #order-modal svg{
+        position: absolute;
+        width: 10vw;
+        left: 85%;
+        top: 1.5%;
+        cursor: pointer;
+        color: #ca0808;
+    }
+}
 
 #order-modal h3 {
     color: #ca0808;
     font-size: 1.5vw;
     margin-bottom: 2%;
 }
+@media screen and (max-width: 500px) {
+    #order-modal h3 {
+        color: #ca0808;
+        font-size: 5vw;
+        margin-bottom: 2%;
+    }
+}
 
 #order-modal .selection {
     width: 50%;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .selection {
+        width: 100%;
+    }
 }
 
 #order-modal .selection form {
@@ -421,6 +463,16 @@ main {
     align-items: flex-start;
     justify-content: flex-start;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
 
 #order-modal .selection form div {
     display: flex;
@@ -431,6 +483,13 @@ main {
     width: 100%;
     justify-content: space-between;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .name-email {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
 
 #order-modal .selection form .name-email input {
     padding: 2% 3%;
@@ -440,10 +499,28 @@ main {
     border-radius: 0.5vw;
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .name-email input {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        margin: 2% 0;
+        width: 100%;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
 
 #order-modal .selection form .size-type {
     width: 100%;
     justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .size-type {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 #order-modal .selection form .size-type select {
@@ -455,10 +532,28 @@ main {
     border-radius: 0.5vw;
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .size-type select {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        background-color: #f3f3f3;
+        width: 48%;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
 
 #order-modal .selection form .crust-quantity {
     width: 100%;
     justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .crust-quantity {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 #order-modal .selection form .crust-quantity select {
@@ -470,6 +565,17 @@ main {
     border-radius: 0.5vw;
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .crust-quantity select {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        background-color: #f3f3f3;
+        width: 48%;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
 
 #order-modal .selection form .crust-quantity input[type=number] {
     padding: 2% 3%;
@@ -480,12 +586,31 @@ main {
     border-radius: 0.5vw;
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .crust-quantity input[type=number] {
+        padding: 2% 3%;
+        font-size: 3.5vw;
+        background-color: #f3f3f3;
+        width: 48%;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
 
 #order-modal .selection form .toppings {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .toppings {
+        margin-top: 7%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 #order-modal .selection form .toppings div {
@@ -528,11 +653,32 @@ main {
     margin-right: 5%;
     cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .toppings div div label .checkbox__marker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 4vw;
+        height: 4vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.3);
+        border-radius: 1vw;
+        margin-right: 5%;
+        cursor: pointer;
+    }
+}
 
 #order-modal .selection form .toppings div div label .checkbox__marker::after {
     content: "\2714";
     color: #fff;
     font-size: 0.8vw;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .selection form .toppings div div label .checkbox__marker::after {
+        content: "\2714";
+        color: #fff;
+        font-size: 3vw;
+    }
 }
 
 #order-modal .selection form div input[type=submit]{
@@ -546,6 +692,19 @@ main {
     cursor: pointer;
     font-size: 0.7vw;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .selection form div input[type=submit]{
+        background-color: #ca0808;
+        color: #fff;
+        padding: 10% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 0;
+        border-radius: 1.5vw;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+}
 
 #order-modal .order-summary {
     width: 50%;
@@ -554,6 +713,15 @@ main {
     align-items: flex-start;
     justify-content: flex-start;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
 
 #order-modal .order-summary .new-order {
     width: 100%;
@@ -561,6 +729,15 @@ main {
     overflow: hidden;
     display: none;
     animation: appear 0.5s;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary .new-order {
+        width: 100%;
+        height: 30vw;
+        overflow-y: auto;
+        display: none;
+        animation: appear 0.5s;
+    }
 }
 
 #order-modal .order-summary .new-order ul {
@@ -573,6 +750,14 @@ main {
     padding: 1% 0;
     margin-left: 3%;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary .new-order ul li {
+        width: 100%;
+        padding: 0;
+        margin-left: 3%;
+    }
+}
+
 
 
 #order-modal .order-summary label {
@@ -581,6 +766,16 @@ main {
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 2%;
+}
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary label {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 10%;
+        margin-bottom: 3%;
+    }
 }
 
 #order-modal .order-summary label input[type=checkbox] {
@@ -607,12 +802,35 @@ main {
     margin-right: 2%;
     cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary label .checkbox__marker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 4vw;
+        height: 4vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.3);
+        border-radius: 1vw;
+        margin-right: 3%;
+        margin-top: 1.5%;
+        cursor: pointer;
+    }
+}
 
 #order-modal .order-summary label .checkbox__marker::after {
     content: "\2714";
     color: #fff;
     font-size: 0.8vw;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary label .checkbox__marker::after {
+        content: "\2714";
+        color: #fff;
+        font-size: 3vw;
+    }
+}
+
 
 #order-modal .order-summary input {
     padding: 2% 3%;
@@ -623,6 +841,18 @@ main {
     border: 0.1vw solid rgba(0, 0, 0, 0.5);
     animation: appear 0.5s;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary input {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        margin: 2%;
+        width: 100%;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
+
 
 #order-modal .order-summary input.hide {
     display: none;
@@ -643,6 +873,20 @@ main {
     cursor: pointer;
     font-size: 0.7vw;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary input[type=submit]{
+        background-color: #ca0808;
+        color: #fff;
+        padding: 3% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 5%;
+        border-radius: 1.5vw;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+}
+
 
 
 #order-modal .order-summary #total {
@@ -665,6 +909,19 @@ main {
     cursor: pointer;
     font-size: 0.7vw;
 }
+@media screen and (max-width: 500px) {
+    #order-modal .order-summary #total button {
+        background-color: #ca0808;
+        color: #fff;
+        padding: 3% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 5%;
+        border-radius: 1.5vw;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+}
 
 #confirmation {
     width: 50%;
@@ -682,6 +939,30 @@ main {
     align-items: center;
     justify-content: center;
     display: none;
+}
+@media screen and (max-width: 500px) {
+    #confirmation {
+        width: 80%;
+        height: auto;
+        padding: 7%;
+        background-color: #ffff;
+        position: fixed;
+        margin-top: 60%;
+        border-radius: 3vw;
+        box-shadow: 0 0 3vw rgba(0, 0, 0, 0.3);
+        animation: appear 0.5s;
+        transition: 0.5s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    #confirmation h3 {
+        margin-top: 2%;
+        text-align: center;
+    }
+    
 }
 
 #confirmation p {
@@ -702,6 +983,20 @@ main {
     border-radius: 0.5vw;
     cursor: pointer;
     font-size: 0.7vw;
+}
+@media screen and (max-width: 500px) {
+    #confirmation button {
+        background-color: #ca0808;
+        color: #fff;
+        padding: 3% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 5%;
+        border-radius: 1.5vw;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+    
 }
 
 /* - - - mobile app section - - - */
