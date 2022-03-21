@@ -36,6 +36,13 @@ h3.menu {
     font-size: 1.5vw;
     padding: 2% 0 1% 0 ;
 } 
+@media screen and (max-width: 500px) {
+    h3.menu {
+        font-size: 6vw;
+        padding: 2% 0 1% 0 ;
+    } 
+}
+
 
 
 hr {
@@ -273,6 +280,17 @@ main {
     align-items: center;
     background-color:#fff
 }
+@media screen and (max-width: 500px) {
+    #menu{
+        width: 100%;
+        padding: 15% 5%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+    }
+}
 
 #menu .cards {
     width: 100%;
@@ -282,6 +300,17 @@ main {
     justify-content: space-between;
     padding: 5% 0;
 }
+@media screen and (max-width: 500px) {
+    #menu .cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 5% 0;
+    }
+}
+
 
 #menu .cards .card{
     width: 30%;
@@ -289,6 +318,15 @@ main {
     border-radius: 3vw;
     box-shadow: 0vw 0.5vw 1vw rgba(0,0,0,0.3);
     padding: 5% 2%;
+}
+@media screen and (max-width: 500px) {
+    #menu .cards .card{
+        width: 90%;
+        margin: 10% 0;
+        border-radius: 7vw;
+        box-shadow: 0vw 0.5vw 3vw rgba(0,0,0,0.3);
+        padding: 10% 2%;
+    }
 }
 
 #menu .cards .card img{
@@ -298,6 +336,12 @@ main {
 #menu .cards p{
    padding: 0 5%;
    font-size: 0.9vw;
+}
+@media screen and (max-width: 500px) {
+    #menu .cards p{
+        padding: 0 5%;
+        font-size: 3.5vw;
+     }
 }
 
 #menu button {
@@ -310,6 +354,19 @@ main {
     border-radius: 0.7vw;
     cursor: pointer;
     font-size: 0.9vw;
+}
+@media screen and (max-width: 500px) {
+    #menu button {
+        background-color: #ca0808;
+        color: #fff;
+        padding: 5% 10%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 10%;
+        border-radius: 3vw;
+        cursor: pointer;
+        font-size: 4vw;
+    }
 }
 
 /* - - - order-modal section - - - */
