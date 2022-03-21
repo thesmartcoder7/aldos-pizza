@@ -14,10 +14,23 @@ p, li {
     font-size: 1vw;
     line-height: 1.7vw;
 }
+@media screen and (max-width: 500px) {
+    p, li {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+}
+
 
 h3 {
     font-size: 2vw;
 }
+@media screen and (max-width: 500px) {
+    h3 {
+        font-size: 7vw;
+    }
+}
+
 
 h3.menu {
     font-size: 1.5vw;
@@ -33,6 +46,17 @@ hr {
     width: 5vw;
     margin-top: 0.5%;
 }
+@media screen and (max-width: 500px) {
+    hr {
+        height: 1vw;
+        background-color: #ca0808;
+        outline: none;
+        border: none;
+        width: 20vw;
+        margin-top: 0.5%;
+    }
+}
+
 
 main {
     display: flex;
@@ -133,11 +157,31 @@ main {
     align-items: center;
     background-color: #f3f3f3;
 }
+@media screen and (max-width: 500px) {
+    #about{
+        width: 100%;
+        padding: 15% 5%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f3f3f3;
+    }
+}
 
 #about .information {
     display: flex;
     padding-top: 4%;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    #about .information {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 10%;
+        justify-content: space-between;
+    }
 }
 
 #about .information div {
@@ -146,11 +190,28 @@ main {
     width: 48%;
 }
 
+@media screen and (max-width: 500px) {
+    #about .information div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 #about .information .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media screen and (max-width: 500px) {
+    #about .information .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10%;
+    }
 }
 
 #about .information .info p {
@@ -169,6 +230,19 @@ main {
     cursor: pointer;
     font-size: 0.9vw;
 }
+@media screen and (max-width: 500px) {
+    #about .information .info button {
+        background-color: #ca0808;
+        color: #fff;
+        padding: 5% 10%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 10%;
+        border-radius: 3vw;
+        cursor: pointer;
+        font-size: 4vw;
+    }
+}
 
 #about .information .images {
     justify-content: flex-end;
@@ -177,6 +251,12 @@ main {
 #about .information .images img {
     width: 90%;
     border-radius: 1vw;
+}
+@media screen and (max-width: 500px) {
+    #about .information .images img {
+        width: 100%;
+        border-radius: 3vw;
+    }
 }
 
 #about .information .images img.active {
