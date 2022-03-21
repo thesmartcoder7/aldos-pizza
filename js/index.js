@@ -92,6 +92,7 @@ let userType = document.querySelector("#type")
 let userCrust = document.querySelector("#crust")
 let userQuantity = document.querySelector("#quantity")
 let pizzaToppings = []
+let totalOrders = []
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault()
@@ -103,15 +104,15 @@ form.addEventListener("submit", (e)=>{
         }
     }
 
-    console.log(
-        userName.value,
-        userEmail.value,
-        userSize.value,
-        userType.value,
-        userCrust.value,
-        userQuantity.value,
-        pizzaToppings 
-        )
+    let newOrder = new Pizza(
+        userType.value, 
+        userSize.value, 
+        userCrust.value, 
+        pizzaToppings
+    )
+    if(!totalOrders.includes(newOrder)){
+        totalOrders.push(newOrder)
+    }
     
 })
 
