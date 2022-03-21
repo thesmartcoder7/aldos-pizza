@@ -16,11 +16,12 @@ let orderCompletionModal = document.querySelector("#confirmation")
 let orderCompletion = document.querySelector("#order-confirm")
 
 /* - - - the pizza object constructor - - -  */
-function Pizza(type, size, crust, toppings) {
+function Pizza(type, size, crust, toppings, quantity) {
     this.type = type
     this.size = size
     this.crust = crust
     this.toppings = toppings
+    this.quantity = quantity
 }
 
 Pizza.prototype.getStandardPrice = function(){
@@ -91,11 +92,50 @@ let userSize = document.querySelector("#size")
 let userType = document.querySelector("#type")
 let userCrust = document.querySelector("#crust")
 let userQuantity = document.querySelector("#quantity")
+let userNameEmail = document.querySelector(".name-email")
 let pizzaToppings = []
 let totalOrders = []
 
+/* - - - add order to cart - - - */
+function addOrderToCart(newOrder){
+    if(totalOrders.length === 0){
+        totalOrders.push(newOrder)
+    }else {
+        if(totalOrders.includes(newOrder)){
+            alert("This item already exists in your cart!")
+        } else {
+            totalOrders.push(newOrder)
+        }
+    }
+}
+
+/* - - - validation function - - - */
+function validation(name, email, size, type, crust, quantity){
+    if(name.value === "" || email.value === "" ){
+        return [false,"Fill in your details in the all the fields"]
+    } else if(size.value === "size") {
+        return [false, "Please choose the size of pizza you want"]
+    } else if(crust.value === "crust"){
+        return [false, "Please choose a crust for your pizza"]
+    } else if (type.value === "type"){
+        return [false,"Please choose the type of pizza you want"]
+    } else {
+        return [true,"Please choose the type of pizza you want"]
+    }
+        
+         
+}
+
+/* - - - form submission event - - - */
 form.addEventListener("submit", (e)=>{
     e.preventDefault()
+    if(!validation(userName, userEmail, userSize, userType, userCrust)[0]){
+        alert(validation(userName, userEmail, userSize, userType, userCrust)[1])
+        console.log()
+        return
+    }
+    
+
     for(i=0; i<userToppings.length; i++){
         if(userToppings[i].checked === true){
             if(!pizzaToppings.includes(userToppings[i].value)){
@@ -108,11 +148,16 @@ form.addEventListener("submit", (e)=>{
         userType.value, 
         userSize.value, 
         userCrust.value, 
-        pizzaToppings
+        pizzaToppings,
+        userQuantity
     )
-    if(!totalOrders.includes(newOrder)){
-        totalOrders.push(newOrder)
-    }
+    
+    addOrderToCart(newOrder)
+    
+    console.log(totalOrders)
+
+    /* - - - - makes sure that all orders are under one name - - - */
+    userNameEmail.style.display = "none"
     
 })
 
