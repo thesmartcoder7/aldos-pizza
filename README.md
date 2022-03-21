@@ -14,9 +14,25 @@
 
 ## Description
 
-This is a simple webapp on which users can come an place an pizza order. It uses the basics of object oriented programming.[live site]()
+This is a simple webapp on which users can come an place an pizza order. It uses the basics of object oriented programming.[live site](thesmartcoder7.github.io/aldos-pizza/)
 
 ## Behaviour Driven Development 
+The user is able to;
+- Choose the size of pizza they want e.g Small, Medium, Large
+
+- Choose what kind of crust they would like the pizza to have e.g Crispy, Stuffed, Gluten-free
+
+- Choose the topping(s) they want on my pizza.
+
+- Place an order for my Pizza and see the total charge for it.
+
+- Have an option to order as many pizzas as they want.
+
+- Have an option to have the pizza delivered or not.  If delivered the user is alerted of how much the delivery charge will be.
+
+- Enter where the delivery should be made and then gets an alert saying  "your order will be delivered to your location"
+
+- See a checkout button that when clicked shows the total amount charged for the orders.
 
 ## Usage
 
