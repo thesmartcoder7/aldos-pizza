@@ -97,6 +97,8 @@ let cartSummary = document.querySelector(".new-order")
 let summaryList = document.querySelector("#summary-list")
 let pizzaToppings = []
 let totalOrders = []
+let totalCharges = 0
+let deliveryCharges = 0
 
 /* - - - add order to cart - - - */
 function addOrderToCart(newOrder){
@@ -108,6 +110,12 @@ function addOrderToCart(newOrder){
         } else {
             totalOrders.push(newOrder)
         }
+    }
+
+    for(i=0; i<totalOrders.length; i++){
+        let pizzaTotal = (totalOrders[i].getStandardPrice() + totalOrders[i].getCrust() + totalOrders[i].getToppings())
+        let orderTotal = parseInt(pizzaTotal * totalOrders[i].quantity)
+        totalCharges += orderTotal
     }
 }
 
@@ -123,9 +131,18 @@ function validation(name, email, size, type, crust, quantity){
         return [false,"Please choose the type of pizza you want"]
     } else {
         return [true,"Please choose the type of pizza you want"]
+    }      
+}
+
+/* - - - get user toppings - - - */
+function getUserToppings(userToppings){
+    for(i=0; i<userToppings.length; i++){
+        if(userToppings[i].checked === true){
+            if(!pizzaToppings.includes(userToppings[i].value)){
+                pizzaToppings.push(userToppings[i].value)
+            }
+        }
     }
-        
-         
 }
 
 /* - - - form submission event - - - */
@@ -136,15 +153,8 @@ form.addEventListener("submit", (e)=>{
         console.log()
         return
     }
-    
 
-    for(i=0; i<userToppings.length; i++){
-        if(userToppings[i].checked === true){
-            if(!pizzaToppings.includes(userToppings[i].value)){
-                pizzaToppings.push(userToppings[i].value)
-            }
-        }
-    }
+    getUserToppings(userToppings)
 
     let newOrder = new Pizza(
         userType.value, 
@@ -157,15 +167,17 @@ form.addEventListener("submit", (e)=>{
     let newItem = document.createElement("li")
     newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust. This order includes ${newOrder.toppings.toString()}, which costs $${newOrder.getToppings()} extra.`
     summaryList.appendChild(newItem)
-    
+
     addOrderToCart(newOrder)
-    
     cartSummary.style.display = "flex"
-    
-    // console.log(totalOrders)
+
+    grandTotal = totalCharges + deliveryCharges
+
+    console.log(grandTotal)
 
     /* - - - - makes sure that all orders are under one name - - - */
     userNameEmail.style.display = "none"
+    totalCharges = 0
     
 })
 
