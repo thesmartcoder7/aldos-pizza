@@ -14,7 +14,7 @@
 
 ## Description
 
-This is a simple webapp on which users can come an place an pizza order. It uses the basics of object oriented programming.[live site](thesmartcoder7.github.io/aldos-pizza/)
+This is a simple webapp on which users can come an place an pizza order. It uses the basics of object oriented programming.[live site](https://thesmartcoder7.github.io/aldos-pizza/)
 
 ## Behaviour Driven Development 
 The user is able to;
