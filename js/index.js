@@ -154,7 +154,7 @@ form.addEventListener("submit", (e)=>{
     if(newOrder.toppings.length === 0){
         newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust and no extra toppings.`
     } else {
-        newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust. This order includes ${newOrder.toppings.toString()}, which costs $${newOrder.getToppings()} extra.`
+        newItem.textContent = `${newOrder.quantity} order(s) of ${newOrder.type} pizza(s) with a ${newOrder.crust} crust. This order includes ${newOrder.toppings.join(", ")}, which costs $${newOrder.getToppings()} extra.`
     }
     
     summaryList.appendChild(newItem)
@@ -163,8 +163,6 @@ form.addEventListener("submit", (e)=>{
     cartSummary.style.display = "flex"
 
     grandTotal = totalCharges + deliveryCharges
-
-    console.log(grandTotal)
 
     /* - - - makes sure that all orders are under one name - - - */
     userNameEmail.style.display = "none"
