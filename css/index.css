@@ -71,6 +71,13 @@ main {
     text-transform: capitalize;
     color: #fff;
 }
+@media screen and (max-width: 500px) {
+    #hero .text h1{
+        font-size: 15vw;
+        text-transform: capitalize;
+        color: #fff;
+    }
+}
 
 #hero .text {
     width: 100%;
@@ -81,6 +88,14 @@ main {
     text-transform: capitalize;
     color: #fff;
 }
+@media screen and (max-width: 500px) {
+    #hero .text h2{
+        font-size: 4vw;
+        text-transform: capitalize;
+        color: #fff;
+    }
+}
+
 
 #hero .text button {
     background-color: #ca0808;
@@ -92,6 +107,19 @@ main {
     border-radius: 0.7vw;
     cursor: pointer;
     font-size: 0.9vw;
+}
+@media screen and (max-width: 500px) {
+    #hero .text button {
+        background-color: #ca0808;
+        color: #fff;
+        padding: 5% 10%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 10%;
+        border-radius: 3vw;
+        cursor: pointer;
+        font-size: 4vw;
+    }
 }
 
 /* - - - about section - - - */
